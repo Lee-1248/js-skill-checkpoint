@@ -8,11 +8,18 @@ const handleResponse = (response) => {
 };
 
 const onSuccess = (data) =>{
-    return console.log(data)
+    let newUsers = [];
+    for (let item in data){
+        newUsers.push((data[item].name))
+    }
+    return console.log(newUsers)
 }
 
 const onFailure = (error) => {
     console.log(error)
-}
-    
+    }
+
 getUser().then(handleResponse).then(onSuccess).catch(onFailure)
+
+
+
