@@ -3,10 +3,14 @@
 function authenticateUser(username, password) {
     const validUsername = "user123";
     const validPassword = "securepass";
-    if (username === validUsername && password === validPassword){
-        return "Login successful"
-    } 
-    return "Login failed. Please check your username and password."
+    return (username === validUsername && password === validPassword) ? "Login successful." : "Login failed. Please check your username and password."
   }
   
+  const username1 = "user123";
+  const password1 = "securepass";
   
+  const username2 = "guest";
+  const password2 = "password123";
+  
+  console.log(authenticateUser(username1, password1)); // Login successful.
+  console.log(authenticateUser(username2, password2)); // Login failed. Please check your username and password.
